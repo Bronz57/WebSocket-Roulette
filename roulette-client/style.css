@@ -1,0 +1,360 @@
+
+/* ====== GOOGLE FONT ======== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+/* ====== BODY ======== */
+
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-color: rgb(43, 160, 146);
+    height: 100vh;
+}
+
+
+
+table{
+    text-align: center;
+    width:  650px;
+    height: 300px;
+    z-index: 3;
+    position: relative;
+    right: 36px;
+}
+
+td, tr {
+    width: 30px;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+td:hover{
+  background: rgba(179, 179, 179, 0.651);
+}
+
+.tabella{
+    position: relative;
+}
+
+
+.active{
+    position: absolute;
+    width: 720px;
+    height: 350px;
+    transform: translateX(-25px);
+    animation-name: my-animation;
+    animation-duration: 2s;
+    border-radius: 20px;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+@keyframes my-animation{
+
+    0% { background: rgba(190, 187, 16, 0.192);}
+    10%{ background: #fff;}
+    20% { background: rgba(190, 187, 16, 0.192);}
+    30%{background: #fff;}
+    40% { background: rgba(190, 187, 16, 0.192);}
+    50%{background: #fff;}
+    60% { background: rgba(190, 187, 16, 0.192);}
+    70%{background: #fff;}
+    80% { background: rgba(190, 187, 16, 0.192);}
+    90%{background: #fff;}
+    100% { background: rgba(190, 187, 16, 0.192);}
+  
+  }
+
+/* ====== CLASSI TABELLA ======== */
+
+.cella0{
+    border-radius: 40px 0px 0px 40px;
+    width: 45px;
+}
+
+.cella2to1{
+    width: 55px;
+}
+
+.topTable, .bottomTable{
+    height: 40px;
+}
+
+.nTable{
+    height: 70px;
+}
+
+.red{
+  color: #fff;  
+  background: rgb(182, 0, 0);
+}
+
+.black{
+    color: #fff;
+    background: #000;
+}
+
+
+
+/* ====== CONTAINER ======== */
+
+
+.tableDiv{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 100%;
+    height: 140px;
+
+}
+
+
+.formContainer{
+    margin-top: 100px;
+    width: fit-content;
+    position: relative;
+    align-items: center;
+    right: 25px;
+}
+
+
+.spinDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    bottom: 70px;
+}
+
+
+.txtFiches{
+    width: 100px !important;
+}
+
+.spnPayout{
+    margin-left: 30px;
+}
+
+.boxFiches{
+    position: relative;
+    bottom: 20px;
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    z-index: 2;
+}
+
+.boxPayout{
+    position: relative;
+    bottom: 20px;
+    width: auto;
+}
+
+
+/* ====== INPUT ======== */
+
+
+.spinbtn{
+    position: relative;
+    left: 12px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 17px;
+    background: #fff;
+    border: transparent;
+
+    transition: all 2s ease-out;
+    cursor: pointer;
+}
+
+.spinbtn:hover{
+    background: rgb(140, 212, 32);
+    transform: rotate(360deg) scale(1.2);
+    transition: all 2s ease-in;
+}
+
+span{
+    font-size: 18px;
+}
+
+label{
+    position: relative;
+    top: 20px;
+    right: 22px;
+}
+
+.lblSpin{
+    position: relative;
+    top: 60px;
+    right: 45px;
+}
+
+
+/* ----- text ----- */
+
+input[type="text"]{
+    border: transparent;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    height: 25px;
+    width: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    background: rgba(0, 0, 0, 0.209);
+}
+
+input[type="text"]:focus{
+    outline: 0;
+}
+
+/* ----- radio ----- */
+
+input[type="radio"]{
+    border: transparent;
+    width: 20px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+input[type="radio"]:hover{
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in;
+}
+
+input[class='radio10']:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #b63030;
+    
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+input[class='radio20']:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: rgb(230, 230, 44);
+    
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+input[class='radio50']:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #3b5d97;
+    
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+
+
+
+/* checked */
+
+input[class='radio10' ]:checked:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #b63030;
+    border: 3px dotted rgb(255, 255, 255);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+input[class='radio20' ]:checked:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: rgb(230, 230, 44);
+    border: 3px dotted rgb(255, 255, 255);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+input[class='radio50' ]:checked:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #3b5d97;
+    border: 3px dotted rgb(255, 255, 255);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+
+
+/* ====== MEDIA ====== */
+
+@media (max-width: 542px) {  
+
+    .boxFiches{
+        width: 100%;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boxPayout{
+        clear: both;
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+};

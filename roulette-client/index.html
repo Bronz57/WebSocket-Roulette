@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+
+
+
+<!-- ============== FAVICON ============== -->
+<link rel="shortcut icon" href=" " type="image/x-icon">
+
+
+
+<!-- ============== CSS ============== -->
+<link rel="stylesheet" href="style.css">
+
+
+<!-- ============== TITLE ============== -->
+<title>AMB Roulette</title>
+
+</head>
+<body>
+
+<!-- ============== HOME ============== -->
+
+
+<div class="container">
+    <div class="formContainer">
+
+   
+            <span>Balance: </span> <input type="text" id="entrata" class="entrata">
+            <br>
+            <span>Fiches: </span>
+                <input type="radio" class="radio10" id="10" name="fiches" value="10" checked>
+                <label for="10">10</label>
+            
+                <input type="radio" class="radio20" id="20" name="fiches" value="20">
+                <label for="20">20</label>
+        
+                <input type="radio" class="radio50" id="50" name="fiches" value="50">
+                <label for="50">50</label>
+   
+    </div>
+</div>
+
+
+
+
+
+<div class="tableDiv">
+<table id="tabella">
+    <tr class="topTable">
+        <td style="border: transparent;"></td>
+        <td colspan="6" onclick="active('n1_18_Scelto')">1 to 18</td>
+        <td colspan="6" onclick="active('n19_36_Scelto')">19 to 36</td>
+    </tr>
+    <tr  class="nTable">
+        <td rowspan="3" class="cella0" onclick="active(0)">0</td>
+        <td class="red cella"> <div  class=" cella" onclick="active(3)" id="3" value="3" nome="cella">3</div></td>
+        <td class="black cella"  onclick="active(6)"id="6" name="cella" value="6">6</td>
+        <td class="red cella"  onclick="active(9)" id="9">9</td>
+        <td class="red cella"  onclick="active(12)" id="12">12</td>
+        <td class="black cella"  onclick="active(15)" id="cella">15</td>
+        <td class="red cella"  onclick="active(18)" id="cella">18</td>
+        <td class="red cella"  onclick="active(21)" id="cella">21</td>
+        <td class="black cella"  onclick="active(24)" id="cella">24</td>
+        <td class="red cella"  onclick="active(27)" id="cella">27</td>
+        <td class="red cella"  onclick="active(30)" id="cella">30</td>
+        <td class="black cella"  onclick="active(33)" id="cella">33</td>
+        <td class="red cella"  onclick="active(36)" id="cella">36</td>
+    </tr>
+    <tr  class="nTable">
+        <td class="black cella"  onclick="active(2)" id="cella">2</td>
+        <td class="red cella"  onclick="active(5)" id="cella">5</td>
+        <td class="black cella"  onclick="active(8)" id="cella">8</td>
+        <td class="black cella" onclick="active(11)" id="cella">11</td>
+        <td class="red cella" onclick="active(14)" id="cella">14</td>
+        <td class="black cella" onclick="active(17)" id="cella">17</td>
+        <td class="black cella" onclick="active(20)" id="cella">20</td>
+        <td class="red cella" onclick="active(23)" id="cella">23</td>
+        <td class="black cella" onclick="active(26)" id="cella">26</td>
+        <td class="black cella" onclick="active(29)" id="cella">29</td>
+        <td class="red cella" onclick="active(32)" id="cella">32</td>
+        <td class="black cella" onclick="active(35)" id="cella">35</td>
+    </tr>
+    <tr  class="nTable">
+        <td class="red cella" onclick="active(1)" id="cella">1</td>
+        <td class="black cella" onclick="active(4)" id="cella">4</td>
+        <td class="red cella" onclick="active(7)" id="cella">7</td>
+        <td class="black cella" onclick="active(10)" id="cella">10</td>
+        <td class="black cella" onclick="active(13)" id="cella">13</td>
+        <td class="red cella" onclick="active(16)" id="cella">16</td>
+        <td class="red cella" onclick="active(19)" id="cella">19</td>
+        <td class="black cella" onclick="active(22)" id="cella">22</td>
+        <td class="red cella" onclick="active(25)" id="cella">25</td>
+        <td class="black cella" onclick="active(28)" id="cella">28</td>
+        <td class="black cella" onclick="active(31)" id="cella">31</td>
+        <td class="red cella" onclick="active(34)" id="cella">34</td>
+    </tr>
+    <tr  class="bottomTable">
+        <td style="border: transparent;"></td>
+        <td colspan="3" onclick="active('even')">EVEN</td>
+        <td colspan="3" class="red" onclick="active('red')">RED</td>
+        <td colspan="3" class="black" onclick="active('black')">BLACK</td>
+        <td colspan="3" onclick="active('odd')">ODD</td>
+    </tr>
+</table>
+
+<div id="active" class=""></div>
+
+</div>
+
+
+
+<div class="spinDiv">
+    <img src="https://bit.ly/3rRHk9r" class="spinbtn" onclick="SendToWebSocketSrv()">
+</div> 
+
+
+
+    <div class="boxFiches">
+        <span class="spnFiches">Chips lost</span><input type="text" class="txtFiches" value='0' id="fichesPerse" disabled>
+    </div>
+
+
+    <div class="boxPayout">
+        <span class="spnPayout">Payout</span><input type="text" class="txtPayout" value='0' id="payout" disabled>
+    </div>
+
+<!-- ============== FOOTER ============== -->
+<hr width="40%">
+<center>
+    <footer>
+        <font size="1px">
+            Copyright &copy; 2022 AMB - All rights reserved
+            <p>Written by Federico Amantini - Monica Bianchi - Christian Bronzetti <br><br>
+                Class VH - ITTS O. Belluzzi - L. da Vinci - Prof. Gabellini A.
+            </p>    
+        </font>
+    </footer>
+</center>
+<!-- ============== MAIN JS ============== -->
+<script src="main.js"></script>
+
+</body>
+</html>
